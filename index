@@ -722,11 +722,10 @@ Alice
         return;
       }
 
-      const parsedNames = rawText
-        .split(/[
-,，;\s]+/)
-        .map(n => n.trim())
-        .filter(n => n.length > 0);
+    const parsedNames = rawText
+      .split(/[\n,，;\s]+/)
+      .map(n => n.trim())
+      .filter(n => n.length > 0);
 
       if (parsedNames.length === 0) {
         showToast('無法辨別任何有效名字');
